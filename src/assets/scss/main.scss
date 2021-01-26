@@ -1,0 +1,34 @@
+@import "varibles";
+@import "fonts";
+
+* {
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+html * {
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul, ol {
+    list-style-type: none;
+
+    &::marker {
+      display: none;
+    }
+  }
+
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
