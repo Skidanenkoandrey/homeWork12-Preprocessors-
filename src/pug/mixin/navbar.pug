@@ -1,0 +1,28 @@
+-
+    let pageRoutes = [
+        {
+            "link": "#",
+            "text": "Home",
+            "aria": "page",
+        },
+        {
+            "link": "#",
+            "text": "About",
+            "aria": "page",
+        },
+        {
+            "link": "#",
+            "text": "Contact",
+            "aria": "page",
+        },
+    ]
+
+
+mixin menu(classNameMenu, classNameItem)
+    ul.navbar-nav(class=classNameMenu)
+        each route in pageRoutes
+            li.nav-item(class=classNameItem)
+                a.nav-link.active(
+                    aria-current=route.aria
+                    href=route.link
+                ) #{route.text}

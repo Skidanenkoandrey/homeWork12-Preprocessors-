@@ -1,0 +1,36 @@
+-
+    let socialNetworkItemsRoute = [
+        {
+            "link": "#",
+            "id": "#facebook"
+        },
+        {
+            "link": "#",
+            "id": "#linkedin"
+        },
+        {
+            "link": "#",
+            "id": "#twitter"
+        },
+        {
+            "link": "#",
+            "id": "#youtube"
+        },
+        {
+            "link": "#",
+            "id": "#instagram"
+        },
+    ]
+
+mixin social-network()
+    .social
+        ul.social__list
+            each socialItem in socialNetworkItemsRoute
+                li.social__item
+                    a.social__link(
+                        href=socialItem.link
+                    )
+                        svg.social__icon
+                            use(
+                                xlink:href=socialItem.id
+                            )

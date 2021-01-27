@@ -1,0 +1,33 @@
+include ../mixin/content-item
+include ../mixin/advantage-item
+include ../mixin/features
+.container-fliud
+    main.main.container
+        .row
+            .col-lg-6
+                +content-item
+                .col-lg-12
+                    .row
+                        .col-sm-6
+                            +advantage-item
+                        .col-sm-6
+                            +advantage-item
+            .col-lg-6
+                img.features__img(
+                    src="assets/img/feature-form.svg"
+                )
+        +features-item("assets/img/feature-message.svg")
+        +features-item("assets/img/feature-like.svg")
+        +features-item("assets/img/feature-mail.svg")
+.offer-wrapper.container-fliud
+    .offer.container
+        .offer__inner
+            h2.title.
+                A Price To Suit Everyone
+            p.text.
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            p.offer__price $40
+            p.offer__name
+            .button-group.offer__.button-group
+                span.tagline See, One price. Simple.
+                +button("Purchase Now")

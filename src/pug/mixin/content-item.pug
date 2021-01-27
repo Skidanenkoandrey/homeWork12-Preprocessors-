@@ -1,0 +1,15 @@
+-
+    let items = [
+        {
+            "title": "Light, Fast & Powerful",
+            "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "textBottom": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
+        },
+    ]
+
+mixin content-item()
+    .content-item
+        each item in items
+            h2.title=item.title
+            p.text=item.text
+            p.text.text-bottom=item.textBottom

@@ -1,0 +1,28 @@
+include ../mixin/navbar
+include  ../mixin/button
+.header-wrapper.container-fluid
+    .header.container
+        .navbar.navbar-expand-lg.navbar-light
+            button.navbar-toggler(
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            )
+                span.navbar-toggler-icon
+            .collapse.navbar-collapse#navbarNav
+                +menu
+            a.navbar-brand.logo(href="#")
+                img.logo__img(src="assets/img/logo.svg")
+            +button("Buy Now")
+        .row
+            .col-lg-6
+                h1.title.title__header.
+                    Introduce Your Product Quickly & Effectively
+                p.text.
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                .button-group
+                    +button("Purchase UI Kit")
+                    +button("Learn More")

@@ -1,0 +1,9 @@
+include ../mixin/button
+mixin features-item (imagePath)
+    .row.features
+        .col-lg-6
+            img.features__img(
+                src=imagePath
+            )
+        .col-lg-6
+            +content-item

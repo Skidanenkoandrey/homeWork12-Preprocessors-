@@ -1,0 +1,21 @@
+include ../mixin/social-network.pug
+
+.footer-wrapper.fliud-container
+    footer.footer.conatiner
+        .row
+            .col-sm-4
+                small.copyright ©2020 Yourcompany
+            .col-sm-4
+                a.logo(
+                    href="#"
+                )
+                    img.logo__img(
+                        src="assets/img/logo.svg"
+                    )
+            .col-sm-4
+                +button("Purchase now")
+        .row
+            .col-mg-6
+                +menu("footer-menu", "footer-menu__item")
+            .col-mg-6
+                +social-network
