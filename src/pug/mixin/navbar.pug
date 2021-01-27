@@ -18,11 +18,11 @@
     ]
 
 
-mixin menu(classNameMenu, classNameItem)
+mixin menu(classNameMenu, classNameItem, classNameLink)
     ul.navbar-nav(class=classNameMenu)
         each route in pageRoutes
             li.nav-item(class=classNameItem)
-                a.nav-link.active(
+                a.nav-link.active(class=classNameLink)(
                     aria-current=route.aria
                     href=route.link
                 ) #{route.text}

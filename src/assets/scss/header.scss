@@ -1,0 +1,24 @@
+.header {
+  &-wrapper {
+    background: url("../../assets/img/banner-img.svg") no-repeat 100% 50%, url("../../assets/img/banner-bg.svg") no-repeat top right;
+  }
+
+  margin-top: 18px;
+
+  &-navbar {
+    justify-content: space-between;
+
+    &-collapse {
+      width: auto;
+    }
+  }
+
+  &__row {
+    margin-top: 261px;
+    margin-bottom: 546px;
+  }
+
+  .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show &__link {
+    color: $link-color;
+  }
+}

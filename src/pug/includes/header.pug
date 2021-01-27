@@ -2,7 +2,7 @@ include ../mixin/navbar
 include  ../mixin/button
 .header-wrapper.container-fluid
     .header.container
-        .navbar.navbar-expand-lg.navbar-light
+        .navbar.navbar-expand-lg.navbar-light.header-navbar
             button.navbar-toggler(
                 type="button"
                 data-bs-toggle="collapse"
@@ -12,17 +12,19 @@ include  ../mixin/button
                 aria-label="Toggle navigation"
             )
                 span.navbar-toggler-icon
-            .collapse.navbar-collapse#navbarNav
-                +menu
-            a.navbar-brand.logo(href="#")
+            .collapse.navbar-collapse.header-navbar-collapse#navbarNav
+                +menu("", "header__item","header__link")
+            a.navbar-brand.logo.m-0(href="#")
                 img.logo__img(src="assets/img/logo.svg")
-            +button("Buy Now")
-        .row
+            +button("Buy Now", "button_header")
+        .row.header__row
             .col-lg-6
                 h1.title.title__header.
                     Introduce Your Product Quickly & Effectively
-                p.text.
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                p.text.text-header.
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                p.text.text-header.text-header_bottom.
+                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
                 .button-group
-                    +button("Purchase UI Kit")
-                    +button("Learn More")
+                    +button("Purchase UI Kit","button-group__button")
+                    +button("Learn More","button-group__button")
