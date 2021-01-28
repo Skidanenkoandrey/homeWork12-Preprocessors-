@@ -19,7 +19,7 @@
 
 
 mixin menu(classNameMenu, classNameItem, classNameLink)
-    ul.navbar-nav(class=classNameMenu)
+    ul.navbar-nav.text-center(class=classNameMenu)
         each route in pageRoutes
             li.nav-item(class=classNameItem)
                 a.nav-link.active(class=classNameLink)(

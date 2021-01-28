@@ -1,21 +1,21 @@
 include ../mixin/social-network.pug
 
 .footer-wrapper.fliud-container
-    footer.footer.conatiner
-        .row
-            .col-sm-4
+    footer.footer.container
+        .row.footer-row__top
+            .col-sm-4.col-4
                 small.copyright ©2020 Yourcompany
-            .col-sm-4
+            .col-sm-4.col-4.text-center
                 a.logo(
                     href="#"
                 )
                     img.logo__img(
                         src="assets/img/logo.svg"
                     )
-            .col-sm-4
-                +button("Purchase now")
-        .row
-            .col-mg-6
+            .col-sm-4.col-4.text-end
+                +button("Purchase now","button_footer")
+        .row.footer-row__bottom
+            .col-sm-6
                 +menu("footer-menu", "footer-menu__item")
-            .col-mg-6
+            .col-sm-6
                 +social-network

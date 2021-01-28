@@ -20,5 +20,57 @@
 
   .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show &__link {
     color: $link-color;
+
+    &:hover {
+      color: $darkBlue-color;
+      font-weight: 600;
+    }
   }
+}
+
+@media screen and(max-width: 991px) {
+
+  .header {
+    &-wrapper {
+      background: none, url("../../assets/img/banner-bg.svg") no-repeat top right;
+    }
+
+    &-navbar {
+      flex-direction: column;
+    }
+
+    &-navbar-collapse {
+      width: 100%;
+      order: 3;
+      padding-top: 20px;
+    }
+
+    &__row {
+      text-align: center;
+      margin: 50px 0 100px;
+    }
+  }
+}
+
+
+@media screen and(max-width: 480px) {
+  .header {
+    &-wrapper {
+      background: rgba($light, .5);
+    }
+
+    &-navbar-collapse {
+      order: 1;
+    }
+  }
+
+  .logo {
+    order: 2;
+    margin-bottom: 20px;
+  }
+
+  .button_header {
+    order: 3
+  }
+
 }

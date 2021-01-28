@@ -3,16 +3,17 @@ include ../mixin/advantage-item
 include ../mixin/features
 .container-fliud
     main.main.container
-        .row
-            .col-lg-6
+        .row.advantage-row
+            .col-lg-6.advantage-col_top
                 +content-item
-                .col-lg-12
-                    .row
-                        .col-sm-6
-                            +advantage-item
-                        .col-sm-6
-                            +advantage-item
-            .col-lg-6
+                .row
+                    .col-lg-12
+                        .row.advantage
+                            .col-sm-6
+                                +advantage-item
+                            .col-sm-6
+                                +advantage-item
+            .col-lg-6.advantage-col
                 img.features__img(
                     src="assets/img/feature-form.svg"
                 )
@@ -24,10 +25,10 @@ include ../mixin/features
         .offer__inner
             h2.title.
                 A Price To Suit Everyone
-            p.text.
+            p.text.offer__text.
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
             p.offer__price $40
-            p.offer__name
-            .button-group.offer__.button-group
-                span.tagline See, One price. Simple.
-                +button("Purchase Now")
+            p.offer__name UI Design Kit
+            .button-group.offer__button-group
+                span.offer__tagline See, One price. Simple.
+                +button("Purchase Now","button_offer")

@@ -1,6 +1,8 @@
 @import "varibles";
 @import "fonts";
 @import "header";
+@import "content";
+@import "footer";
 
 * {
   box-sizing: border-box;
@@ -41,6 +43,7 @@ body {
   border: 2px solid transparent;
   transition: 0.2s;
   color: $button-color;
+  padding: 5px 0;
 
   &:hover {
     background: transparent;
@@ -53,20 +56,34 @@ body {
   &_header {
     max-width: 160px;
     width: 100%;
+    padding: 2px;
     font-size: $font-xs;
   }
-  &-group__button {
+
+  &-group__button,
+  &_offer {
     max-width: 189px;
     width: 50%;
-    padding: 5px 0;
+
     &:first-child {
       margin-right: 30px;
     }
+  }
+  &_offer {
+    width: 100%;
+  }
+  &_footer {
+    max-width: 109px;
+    width: 100%;
+    padding: 0 5px;
+    font-size: $font-xs;
   }
 }
 
 .title {
   color: $dark-color;
+  margin-bottom: 16px;
+  font-size: $font-l;
 
   &__header {
     font-size: $font-xl;
@@ -76,13 +93,25 @@ body {
 }
 
 .text {
-  font-size: $font-s;
-  &-header {
-    font-size: $font-m;
+  font-size: $font-m;
+  margin-bottom: 20px;
 
-    &_bottom {
-      margin-top: 20px;
-      margin-bottom: 70px;
+  &-bottom {
+    margin-bottom: 0;
+  }
+}
+
+.features__img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .button {
+    &-group__button:first-child {
+      margin-right: 0;
+    }
+    &-group__button {
+      width: 46%;
     }
   }
 }

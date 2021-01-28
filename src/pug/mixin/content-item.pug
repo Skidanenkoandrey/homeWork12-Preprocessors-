@@ -7,8 +7,8 @@
         },
     ]
 
-mixin content-item()
-    .content-item
+mixin content-item(ClassName)
+    .content-item(class=ClassName)
         each item in items
             h2.title=item.title
             p.text=item.text
