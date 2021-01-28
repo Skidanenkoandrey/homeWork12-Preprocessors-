@@ -68,15 +68,22 @@ body {
     &:first-child {
       margin-right: 30px;
     }
+
   }
+
   &_offer {
     width: 100%;
   }
+
   &_footer {
     max-width: 109px;
     width: 100%;
     padding: 0 5px;
     font-size: $font-xs;
+  }
+
+  &-group {
+    margin-top: 70px;
   }
 }
 
@@ -96,9 +103,10 @@ body {
   font-size: $font-m;
   margin-bottom: 20px;
 
-  &-bottom {
+  &-header_bottom {
     margin-bottom: 0;
   }
+
 }
 
 .features__img {
@@ -110,6 +118,7 @@ body {
     &-group__button:first-child {
       margin-right: 0;
     }
+
     &-group__button {
       width: 46%;
     }
